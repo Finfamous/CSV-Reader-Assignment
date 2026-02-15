@@ -53,8 +53,9 @@ while True:
         print("")
 #while True Loop waits for valid number input
 while True:
-    SelectRegion = int(input ("Select the Region you want to count all sales in for this console: 6 = NA_Sales, 7 = EU_Sales, 8 = JP_Sales, 9 = Other_Sales, 10 = Global_Sales\n\n"))
+    
     try: 
+        SelectRegion = int(input ("Select the Region you want to count all sales in for this console: 6 = NA_Sales, 7 = EU_Sales, 8 = JP_Sales, 9 = Other_Sales, 10 = Global_Sales\n\n"))
         Region = int(SelectRegion)
         if Region in {6, 7, 8, 9, 10}:
             break
@@ -65,9 +66,7 @@ while True:
         print("")
 
 #Print the number of Sales for a selected Games console
-print(NumberOfSalesPerConsole("VideoGamesSales.csv", SelectConsole, SelectRegion))
+print(NumberOfSalesPerConsole("VideoGamesSales.csv", Console, Region))
 #Print the number of items in csv
 print(CountTotalData("VideoGamesSales.csv"))
-
-
 
