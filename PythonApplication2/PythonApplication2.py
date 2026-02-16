@@ -22,7 +22,7 @@ def CountTotalData(CSVPath: str):
         print(f"Cannot open CSV file, Error: {exc}")
     return None
 
-#Check for matching strings in CSV
+#Funciton to heck for matching strings in CSV
 def NumberOfSalesPerConsole(CSVPath: str, Console: str, SalesRegion: int):
      
     total = 0.0
@@ -68,5 +68,6 @@ while True:
 #Print the number of Sales for a selected Games console
 print(NumberOfSalesPerConsole("VideoGamesSales.csv", Console, Region))
 #Print the number of items in csv
+print("Columns, Rows, Total Data points")
 print(CountTotalData("VideoGamesSales.csv"))
 
